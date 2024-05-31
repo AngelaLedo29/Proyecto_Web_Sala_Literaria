@@ -19,7 +19,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ libro.titulo }}</h5>
                 <a type="button" class="btn btn-outline-success" href="{% url 'detalle-libro' libro.id %}">Ver ficha</a>
-                {% comment %} <a type="button" class="btn btn-outline-success mt-2" onclick="agregarAlCarrito({{ libro.id }})">Agregar al carrito</a> {% endcomment %}
+                <a type="button" class="btn btn-outline-success mt-2" onclick="agregarAlCarrito({{ libro.id }})">Agregar al carrito</a>
             </div>
         </div>
     </div>
@@ -28,10 +28,11 @@
 
 
 
-{% comment %} <script>
+<script>
     function agregarAlCarrito(libroId) {
         console.log("Libro agregado al carrito con ID:", libroId);
+        window.alert("Libro agregado al carrito con ID: " + libroId);
     }
-</script> {% endcomment %}
+</script>
     
 {% endblock %}
