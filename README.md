@@ -1,6 +1,6 @@
 <h1>Proyecto Final de Ciclo - Ángela Ledo Uriel(Sala Literaria)</h1>
 
-Para poder desplegar la aplicación web tendremos que ir a la carpeta de Sala Literaria:
+Para poder desplegar la aplicación web tendremos que al CMD e ir a la carpeta de Sala Literaria:
 > cd Sala Literaria
 
 Después activamos el entorno con el siguiente comando:
