@@ -11,3 +11,8 @@ A continuacion iremos a la carpeta de biblioteca:
 
 Y por último arrancaremos la aplicacion con este commando:
 > py manage.py runserver
+
+Ahora iremos al navegador web y pondremos:
+> localhost:8000
+
+Y se nos mostrará la aplicación web
