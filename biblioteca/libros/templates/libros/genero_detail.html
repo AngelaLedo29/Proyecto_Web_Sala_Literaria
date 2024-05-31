@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Detalles de genero{% endblock %}
+
+{% block content %}
+<h1 class="text-center">{{ genero.nombre }}</h1>
+
+<div class="row row-cols-1 row-cols-md-5 g-4">
+    {% for libro in libro_list %}
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{ libro.portada }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ libro.titulo }}</h5>
+                <p class="card-text">{{ libro.autor }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+ 
+{% endblock %}

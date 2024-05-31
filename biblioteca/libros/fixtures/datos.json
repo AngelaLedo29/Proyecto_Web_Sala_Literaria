@@ -1,0 +1,251 @@
+[
+  {
+    "model": "libros.genero",
+    "pk": 1,
+    "fields": { "nombre": "Realismo m�gico" }
+  },
+  {
+    "model": "libros.genero",
+    "pk": 2,
+    "fields": { "nombre": "Novela rom�ntica" }
+  },
+  {
+    "model": "libros.genero",
+    "pk": 3,
+    "fields": { "nombre": "Novela rom�ntica y er�tica" }
+  },
+  {
+    "model": "libros.genero",
+    "pk": 4,
+    "fields": { "nombre": "Literatura juvenil" }
+  },
+  {
+    "model": "libros.genero",
+    "pk": 5,
+    "fields": { "nombre": "Literatura er�tica" }
+  },
+  {
+    "model": "libros.genero",
+    "pk": 6,
+    "fields": { "nombre": "Romance contempor�neo" }
+  },
+  { "model": "libros.genero", "pk": 7, "fields": { "nombre": "Novela rosa" } },
+  { "model": "libros.genero", "pk": 8, "fields": { "nombre": "Drama" } },
+  { "model": "libros.genero", "pk": 9, "fields": { "nombre": "Suspenso" } },
+  { "model": "libros.genero", "pk": 10, "fields": { "nombre": "Terror" } },
+  {
+    "model": "libros.genero",
+    "pk": 11,
+    "fields": { "nombre": "Rom�ntico y de amor" }
+  },
+  {
+    "model": "libros.autor",
+    "pk": 1,
+    "fields": {
+      "nombre": "Gabriel",
+      "apellidos": "Garc�a M�rquez",
+      "biografia": "Gabriel Garc�a M�rquez fue un escritor, novelista, cuentista, guionista y periodista colombiano. Naci� el 6 de marzo de 1927 en Aracataca, Colombia...",
+      "nacionalidad": "Colombiana"
+    }
+  },
+  {
+    "model": "libros.autor",
+    "pk": 2,
+    "fields": {
+      "nombre": "Alice",
+      "apellidos": "Kellen",
+      "biografia": "Alice Kellen es una escritora espa�ola de literatura rom�ntica juvenil y adulta. Comenz� su carrera como escritora en 2013 con Ll�vame a cualquier lugar y ha seguido publicando hasta la actualidad, contando ya con quince libros en el mercado",
+      "nacionalidad": "Espa�ola"
+    }
+  },
+  {
+    "model": "libros.autor",
+    "pk": 3,
+    "fields": {
+      "nombre": "Elizabeth",
+      "apellidos": "Eulberg",
+      "biografia": "Elizabeth Eulberg naci� y creci� en Wisconsin, Estados Unidos. M�s tarde tom� rumbo a la universidad de Siracura y luego se estableci� en Nueva York, donde desarroll� su profesi�n en el sector editorial",
+      "nacionalidad": "Estadounidense"
+    }
+  },
+  {
+    "model": "libros.autor",
+    "pk": 4,
+    "fields": {
+      "nombre": "Alexandra",
+      "apellidos": "Roma",
+      "biografia": "Alexandra Roma naci� en Madrid en 1987. Ganadora del V Premio Literario La Caixa / Plataforma Editorial con Hasta que el viento te devuelva la sonrisa y finalista en la quinta edici�n del Premio Titania",
+      "nacionalidad": "Espa�ola"
+    }
+  },
+  {
+    "model": "libros.autor",
+    "pk": 5,
+    "fields": {
+      "nombre": "Katee",
+      "apellidos": "Robert",
+      "biografia": "Katee Robert (ella/elle) se dedica a escribir novelas rom�nticas y er�ticas que se sit�an habitualmente en las listas de m�s vendidos de The New York Times y USA Today, y de las que ha vendido ya m�s de dos millones de copias",
+      "nacionalidad": "Estadounidense"
+    }
+  },
+  {
+    "model": "libros.autor",
+    "pk": 6,
+    "fields": {
+      "nombre": "Rachael",
+      "apellidos": "Lippincott",
+      "biografia": "Rachael Lippincott es una novelista estadounidense superventas del New York Times. Es conocida por escribir la adaptaci�n a novela de la pel�cula A dos metros de ti, publicada el 20 de noviembre de 2018, que se convirti� en una conocida pel�cula dirigida por Justin Baldoni",
+      "nacionalidad": "Estadounidense"
+    }
+  },
+  {
+    "model": "libros.autor",
+    "pk": 7,
+    "fields": {
+      "nombre": "Adam",
+      "apellidos": "Nevill",
+      "biografia": "Adam L. G. Nevill naci� en Birmingham, Reino Unido, en 1969 y se crio en ese mismo pa�s y en Nueva Zelanda. Tambi�n es el autor de Apartamento 16 y Banquet for the Damned, una original novela de terror sobrenatural inspirada en M. R. James y la tradici�n del relato ingl�s de fantasmas. Ha desempe�ado diversos trabajos a lo largo de su vida, entre ellos el de vigilante nocturno y portero de d�a de 2000 a 2004 en los exclusivos apartamentos del West London",
+      "nacionalidad": "Brit�nico"
+    }
+  },
+  {
+    "model": "libros.autor",
+    "pk": 8,
+    "fields": {
+      "nombre": "Adam",
+      "apellidos": "Silvera",
+      "biografia": "Naci� y se cri� en el barrio del Bronx de Nueva York. Ha trabajado en la industria editorial como librero de literatura infantil, auxiliar de marketing en una empresa de promoci�n literaria y cr�tico de novelas infantiles y juveniles. Su primera novela, No me olvides (More happy than not), ha recibido excelentes cr�ticas y numerosas menciones en prestigiosas publicaciones",
+      "nacionalidad": "Estadounidense"
+    }
+  },
+  {
+    "model": "libros.libro",
+    "pk": 1,
+    "fields": {
+      "titulo": "Cien a�os de soledad",
+      "autor": 1,
+      "sinopsis": "Cien a�os de soledad es una novela del escritor colombiano Gabriel Garc�a M�rquez, ganador del Premio Nobel de Literatura en 1982. Es una obra maestra del realismo m�gico y narra la historia de la familia Buend�a en el pueblo ficticio de Macondo",
+      "año_publicacion": 1967,
+      "precio": "20.50",
+      "portada": "https://m.media-amazon.com/images/I/91TvVQS7loL._AC_UF894,1000_QL80_.jpg",
+      "genero": [1]
+    }
+  },
+  {
+    "model": "libros.libro",
+    "pk": 2,
+    "fields": {
+      "titulo": "13 Locuras que regalarte",
+      "autor": 2,
+      "sinopsis": "La trama sigue la historia de Zoe, una joven artista que vive en Par�s y trata de superar una ruptura amorosa. A pesar de su coraz�n roto, Zoe se embarca en una aventura para encontrar el amor propio y la felicidad. En su b�squeda, conoce a Alex, un hombre misterioso que despierta sentimientos que cre�a haber perdido. Juntos, Zoe y Alex exploran el significado del amor y la importancia de seguir adelante. La novela combina elementos de romance, auto-descubrimiento y la belleza de la Ciudad de la Luz, ofreciendo una historia emotiva y cautivadora",
+      "año_publicacion": 2018,
+      "precio": "15.20",
+      "portada": "https://m.media-amazon.com/images/I/719ae35KX1L._AC_UF894,1000_QL80_.jpg",
+      "genero": [2, 3]
+    }
+  },
+  {
+    "model": "libros.libro",
+    "pk": 3,
+    "fields": {
+      "titulo": "�Y si quedamos como amigos?",
+      "autor": 3,
+      "sinopsis": "La historia sigue a dos mejores amigos, Macallan y Levi, quienes han sido inseparables desde que eran ni�os. A pesar de sus diferencias, su amistad es s�lida y especial. Sin embargo, cuando comienzan la escuela secundaria, las cosas comienzan a cambiar. Macallan comienza a interesarse en chicos, mientras que Levi se encuentra en una relaci�n tumultuosa. A medida que enfrentan los altibajos de la adolescencia, Macallan y Levi se dan cuenta de que su amistad es m�s importante que cualquier romance. Juntos, navegan por el amor, la p�rdida y la lealtad, aprendiendo valiosas lecciones sobre la importancia de la amistad verdadera. La novela es una exploraci�n conmovedora y divertida de las complejidades de las relaciones humanas y el poder duradero de la amistad",
+      "año_publicacion": 2014,
+      "precio": "20.11",
+      "portada": "https://images.cdn3.buscalibre.com/fit-in/360x360/aa/fc/aafc5faf0e4915db586400e4d5aa88d8.jpg",
+      "genero": [4]
+    }
+  },
+  {
+    "model": "libros.libro",
+    "pk": 4,
+    "fields": {
+      "titulo": "El d�a que encendimos las estrellas",
+      "autor": 4,
+      "sinopsis": "Diez meses despu�s del �ltimo beso con Noah, Marina trabaja en Roma y piensa en �l, y le siente, pero empieza a olvidar su tacto. Diez meses despu�s, Leo sigue cubriendo su cuerpo de tinta, alejado de sus flores y siendo el solista del borde del abismo, pero ha perdido la ilusi�n. Diez meses despu�s surge la oportunidad para que Noah pueda dejar una huella imborrable, y sus caminos vuelven a unirse.",
+      "año_publicacion": 2022,
+      "precio": "17.00",
+      "portada": "https://www.planetadelibros.com/usuaris/libros/fotos/355/original/portada_el-dia-que-encendimos-las-estrellas_alexandra-roma_202205250917.jpg",
+      "genero": [2, 3]
+    }
+  },
+  {
+    "model": "libros.libro",
+    "pk": 5,
+    "fields": {
+      "titulo": "Seducing My Guardian",
+      "autor": 5,
+      "sinopsis": "La noche en que mueren mis padres, conozco a un sexy desconocido que me dice que es mi nuevo tutor. Antes de que pueda pesta�ear, me env�a a un internado y me ignora durante tres a�os... hasta que aparece en mi decimonoveno cumplea�os para salvarme de m� misma. Aparece en mi cumplea�os. Me salva. Tentarme. Y luego me env�a por mi camino cuando la qu�mica entre nosotros chisporrotea demasiado caliente. Todo eso termina esta noche. Cumplo veinticinco y a medianoche tengo el control de mi fondo fiduciario. Despu�s de esto, no tendr� que volver a ver a Devan y �l ya no me volver� loca con su devastador dominio. Este a�o, todo lo que quiero para mi cumplea�os son veinticuatro horas con mi guardi�n. Tras nueve a�os de deseos tab� y lujuria acumulada, tengo un mont�n de fantas�as insatisfechas que llevar a cabo",
+      "año_publicacion": 2014,
+      "precio": "10.65",
+      "portada": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsT1ZP4M3HK1taPtfzyeICg1gXvH7XIeb0vRNyDA5xia8enLq5",
+      "genero": [5, 6]
+    }
+  },
+  {
+    "model": "libros.libro",
+    "pk": 6,
+    "fields": {
+      "titulo": "23 oto�os antes de ti",
+      "autor": 2,
+      "sinopsis": "Lo que pasa en Las Vegas se queda en Las Vegas. O al menos eso fue lo que Harriet Gibson pens� tras conseguir casarse all� con Luke Evans, el primer desconocido que se cruz� en su camino. Esos papeles matrimoniales eran todo lo que necesitaba para cobrar la herencia de su padre. Sin embargo, todo se complica cuando, dos a�os despu�s, �l da con su paradero y llega sin avisar al peque�o pueblo donde ella vive. Luke es testarudo y tiene la firme intenci�n de conseguir el divorcio, pero Harriet no tarda en advertir que tambi�n es descarado, sexi y divertido; algo que termina siendo un camino tentador pero lleno de problemas. �Qu� hacer cuando tu coraz�n toma la direcci�n equivocada? �A veces, un lugar perdido en medio del mapa puede ser el detonante para encontrarse a uno mismo?",
+      "año_publicacion": 2017,
+      "precio": "12.35",
+      "portada": "https://m.media-amazon.com/images/I/71tyN55rS6L._AC_UF894,1000_QL80_.jpg",
+      "genero": [6, 7]
+    }
+  },
+  {
+    "model": "libros.libro",
+    "pk": 7,
+    "fields": {
+      "titulo": "33 razones para volver a verte",
+      "autor": 2,
+      "sinopsis": "Mike, Rachel, Luke y Jason han sido amigos inseparables desde peque�os. Pero sus caminos se alejaron cuando Rachel cometi� el error de enamorarse del chico equivocado, Mike, que termin� traicionando a la �nica persona que siempre estuvo dispuesta a arriesgarlo todo por �l. Cinco a�os despu�s, el destino vuelve a unirlos; pero ahora Rachel ha cambiado, es tan arisca como su gato Mantequilla y ya no se permite confiar en nadie. Por eso, a pesar de estar a punto de ser desahuciada, lo �ltimo que desea es dejarse convencer para mudarse con ellos. �C�mo podr�a mantener su coraz�n intacto y a salvo viviendo bajo el mismo techo que Mike? Sabe que esconde secretos y que su mirada gris es capaz de despertar todos los recuerdos que ella lleva tanto tiempo intentando olvidar",
+      "año_publicacion": 2016,
+      "precio": "14.25",
+      "portada": "https://m.media-amazon.com/images/I/81BnahhbmjS._AC_UF1000,1000_QL80_.jpg",
+      "genero": [6, 7]
+    }
+  },
+  {
+    "model": "libros.libro",
+    "pk": 8,
+    "fields": {
+      "titulo": "A dos metros de ti libro",
+      "autor": 6,
+      "sinopsis": "El libro de la conmovedora pel�cula con Cole Sprouse y Haley Lu Richardson Necesitamos estar cerca de las personas que queremos casi tanto como el aire que respiramos. A Stella Grant le gusta tener el control, a pesar de no poder dominar sus propios pulmones, que la han tenido en el hospital la mayor parte de su vida",
+      "año_publicacion": 2019,
+      "precio": "18.00",
+      "portada": "https://imagessl5.casadellibro.com/a/l/s5/25/9788417605025.webp",
+      "genero": [8, 9]
+    }
+  },
+  {
+    "model": "libros.libro",
+    "pk": 9,
+    "fields": {
+      "titulo": "Apartamento 16",
+      "autor": 8,
+      "sinopsis": "Algunas puertas deber�an permanecer cerradas... En Barrington House, un elegante bloque de pisos londinense, hay un apartamento vac�o. Nadie entra, nadie sale. Y ha permanecido as� durante cincuenta a�os. Hasta que una noche el vigilante oye unos ruidos despu�s de medianoche y decide ir a investigar. Lo que experimenta all� basta para cambiar su vida para siempre. La joven Apryl llega a Barrington House procedente de Estados Unidos. Ha heredado un apartamento de su misteriosa t�a abuela Lillian, fallecida en extra�as circunstancias. Se rumorea que Lillian estaba loca. Pero su diario insin�a que estuvo implicada en un suceso terrible e inexplicable varias d�cadas atr�s. Decidida a averiguar algo sobre esta exc�ntrica mujer, Apryl comenzar� a desentra�ar la historia oculta de Barrington House. No tardar� demasiado en descubrir que un mal que transforma a la gente a�n habita el edificio. Y que la puerta del apartamento 16 es el acceso a algo mucho m�s terror�fico",
+      "año_publicacion": 2011,
+      "precio": "18.00",
+      "portada": "https://www.planetadelibros.com/usuaris/libros/fotos/291/original/portada_apartamento-16_adam-nevill_201812262300.jpg",
+      "genero": [10]
+    }
+  },
+  {
+    "model": "libros.libro",
+    "pk": 10,
+    "fields": {
+      "titulo": "Al final mueren los dos",
+      "autor": 8,
+      "sinopsis": "Mateo Torrez y Rufus Emeterio no se han conocido en clase ni en una fiesta, como cualquier otro chico de su edad. Ellos lo han hecho a trav�s de �ltimo Amigo, una aplicaci�n creada para que aquellas personas que han recibido la llamada de Muerte S�bita, una organizaci�n que anuncia que tu muerte est� a la vuelta de la esquina, puedan acompa�arse en sus �ltimas horas.\r\n\r\nMateo y Rufus no podr�an ser m�s distintos, pero pronto comprender�n que los une algo mucho m�s que un final inminente. Juntos, est�n a punto de descubrir que nunca es tarde para derribar los muros; ni para reparar todo aquello que habr�as hecho de otra manera si pudiera",
+      "año_publicacion": 2017,
+      "precio": "14.25",
+      "portada": "https://images.cdn3.buscalibre.com/fit-in/360x360/78/3c/783cd744b6140cfa1850a91fd8cf745a.jpg",
+      "genero": [4]
+    }
+  }
+]

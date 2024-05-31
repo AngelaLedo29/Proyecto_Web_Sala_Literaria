@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Listado de libros{% endblock %}
+
+{% block content %}
+<h1>Listado de Listas Lectura</h1>
+
+{% if anterior %}
+<a class="btn btn-success" href="{{ anterior }}" role="button">Volver</a>
+{%  endif %}
+
+<a href="{% url 'crear-lista' %}" class="btn btn-outline-success">Crear</a>
+
+<div class="container">
+    <div class="row">
+    {% for lista in listalectura_list %}
+        <div class="col-md-5 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5>{{ lista.nombre }}</h5>
+                </div>
+
+                <div class="card-body">
+                    <div class="row">
+                        {% for libro in lista.libros.all %}
+                            <div class="col-md-4 col-6 mb-3">
+                                <div class="card">
+                                    <img src="{{ libro.portada }}" class="card-img-top" alt="{{ libro.titulo }}">
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <p class="card-text"><small class="text-muted">Creado por <strong>{{ lista.usuario.nombre }}</strong></small></p>
+                </div>
+
+                <div class="card-footer">
+                    {% comment %} <a href="{% url 'detalle-lista' lista.id %}" class="btn btn-outline-success me-3">Ver detalles</a> {% endcomment %}
+                    <a href="{% url 'actualizar-lista' lista.id %}" class="btn btn-outline-primary me-3">Actualizar</a>
+                    <a href="{% url 'eliminar-lista' lista.id %}" class="btn btn-outline-danger">Eliminar</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Confirmar eliminación de la reseña{% endblock %}
+
+{% block content %}
+<h1 class="text-center">Confirmar eliminación de la reseña</h1>
+
+<p>
+  ¿Estás seguro de que quieres eliminar la reseña de <strong>{{ reseña.usuario.nombre }}</strong> 
+  sobre <strong>{{ reseña.libro.titulo }}</strong>?
+</p>
+
+<form action="" method="post">
+  {% csrf_token %}
+  <input type="submit" value="Confirmar" class="btn btn-danger" />
+  <a href="{% url 'detalle-libro' reseña.libro.id %}" class="btn btn-success">Denegar</a>
+</form>
+{% endblock %}

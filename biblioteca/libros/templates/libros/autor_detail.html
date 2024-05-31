@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Detalle del Autor{% endblock %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-center">
+    <div class="card mb-3 mt-3" style="width: 70%;">
+        <div class="row g-0">    
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2 class="card-title">{{ autor.apellidos }}, {{ autor.nombre }}</h2>
+                    <p class="card-text">{{ autor.biografia }}</p>
+                    <p class="card-text">{{ autor.nacionalidad }}</p>
+
+                    <div class="text-center mt-3">
+                        <a href="{% url 'lista-autores' %}" class="btn btn-outline-success me-3">Volver al listado</a>
+                        <a href="{% url 'actualizar-autor' autor.id %}" class="btn btn-outline-primary me-3">Actualizar</a>
+                        <a href="{% url 'eliminar-autor' autor.id %}" class="btn btn-outline-danger">Eliminar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1>Libros escritos por {{ autor.nombre }} {{ autor.apellidos }}</h1>
+<div class="row row-cols-1 row-cols-md-5 g-4">
+    {% for libro in autor.libro_set.all %}
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{ libro.portada }}" class="card-img-top" alt="{{ libro.titulo }}" />
+            <div class="card-body">
+                <h5 class="card-title">{{ libro.titulo }}</h5>
+                <a type="button" class="btn btn-outline-success" href="{% url 'detalle-libro' libro.id %}">Ver ficha</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

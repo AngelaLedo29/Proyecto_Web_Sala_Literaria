@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Listado de autores{% endblock %}
+
+{% block content %}
+<div class="row my-4">
+    <h1 class="col-6">Listado de autores</h1>
+    <h1 class="col-6">
+        <form class="d-flex" action="{% url 'busqueda' %}" method="get">
+            <input class="form-control me-sm-2" type="text" name="q" placeholder="Buscar autor..." {% if buscar %}
+                value="{{buscar}}" {% endif %} required>
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+    </h1>
+</div>
+
+<a href="{% url 'crear-autor' %}" class="btn btn-outline-success">Crear</a>
+
+{% if anterior %}
+<a class="btn btn-success" href="{{ anterior }}" role="button">Volver</a>
+{% endif %}
+
+<div class="row row-cols-1 row-cols-md-5 g-4">
+    {% for autor in autor_list %}
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <a href="{% url 'detalle-autor' autor.id %}" style="text-decoration: none;"><h5 class="card-title">{{ autor.nombre }} {{ autor.apellidos }}</h5></a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

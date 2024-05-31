@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Actualidad</h2>
+<div class="row row-cols-1 row-cols-md-5 g-4">
+    {% for libro in libros_actualidad %}
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{ libro.portada }}" class="card-img-top" alt="{{ libro.titulo }}" />
+            <div class="card-body">
+                <h5 class="card-title">{{ libro.titulo }}</h5>
+                <a type="button" class="btn btn-outline-success" href="{% url 'detalle-libro' libro.id %}">Ver ficha</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<h2 class="mt-3">Literatura erótica</h2>
+<div class="row row-cols-1 row-cols-md-5 g-4">
+    {% for libro in libros_literatura_erótica %}
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{ libro.portada }}" class="card-img-top" alt="{{ libro.titulo }}" />
+            <div class="card-body">
+                <h5 class="card-title">{{ libro.titulo }}</h5>
+                <a type="button" class="btn btn-outline-success" href="{% url 'detalle-libro' libro.id %}">Ver ficha</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<h2 class="mt-3">Realismo mágico</h2>
+<div class="row row-cols-1 row-cols-md-5 g-4">
+    {% for libro in libros_realismo_mágico %}
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{ libro.portada }}" class="card-img-top" alt="{{ libro.titulo }}" />
+            <div class="card-body">
+                <h5 class="card-title">{{ libro.titulo }}</h5>
+                <a type="button" class="btn btn-outline-success" href="{% url 'detalle-libro' libro.id %}">Ver ficha</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

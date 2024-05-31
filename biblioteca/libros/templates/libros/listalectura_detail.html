@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Detalle del Autor{% endblock %}
+
+{% block content %}
+<h1 class="text-center">{{ listalectura.nombre }}</h1>
+
+
+<div class="text-center mt-3">
+    <a href="{% url 'lista-lectura' %}" class="btn btn-outline-success me-3">Volver al listado</a>
+</div>
+
+{% endblock %}

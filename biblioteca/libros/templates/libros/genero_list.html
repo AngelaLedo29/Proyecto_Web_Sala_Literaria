@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Listado de generos{% endblock %}
+
+{% block content %}
+<h1>Listado de generos</h1>
+
+<div class="container">
+    {% for genero in genero_list %}
+        <a class="btn btn-primary mb-2" href="{% url 'detalle-genero' genero.id %}" role="button">{{ genero.nombre }}</a>
+    {% endfor %}
+</div>
+    
+{% endblock %}

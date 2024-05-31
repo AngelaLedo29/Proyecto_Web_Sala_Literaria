@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Detalle de libro{% endblock %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-center">
+    <div class="card mb-3 mt-3" style="width: 70%;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{ libro.portada }}" class="img-fluid rounded-start" alt="...">
+            </div>
+    
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2 class="card-title">{{ libro.titulo }}</h2>
+                    <p class="card-subtitle mb-2 text-muted">{{ libro.autor }}</p>
+                    <p class="card-text text-justify">{{ libro.sinopsis }}</p>
+                    <p class="card-text">{{ libro.año_publicacion }}</p>
+                    <p class="card-text">{{ libro.genero.all|join:", " }}</p>
+                    <p class="card-text">{{ libro.precio }}</p>
+                    
+                    <div class="text-center mt-3">
+                        <a href="{% url 'lista-libros' %}" class="btn btn-outline-success me-3">Volver al listado</a>
+                        <a href="{% url 'actualizar-libro' libro.id %}" class="btn btn-outline-primary me-3">Actualizar</a>
+                        <a href="{% url 'eliminar-libro' libro.id %}" class="btn btn-outline-danger">Eliminar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class = "container mt-4">
+    <h3>Reseñas del libro</h3>
+
+    <a href="{% url 'crear-reseña' %}" class="btn btn-outline-success mb-3">Crear Reseña</a>
+
+    <ul class="list-group">
+        {% for reseña in reseñas %}
+        <li class="list-group-item">
+            <p><strong>{{ reseña.usuario.nombre }}</strong> - Puntuación: {{ reseña.calificacion }}/5</p>
+            <p>{{ reseña.comentario }}</p>
+
+            <a href="{% url 'actualizar-reseña' reseña.id %}" class="btn btn-outline-primary me-3">Actualizar</a>
+            <a href="{% url 'eliminar-reseña' reseña.id %}" class="btn btn-outline-danger">Eliminar</a>
+        </li>
+
+        {% empty %}
+        <li class="list-group-item">
+            No hay reseñas para este libro.
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

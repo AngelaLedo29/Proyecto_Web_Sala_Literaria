@@ -1,0 +1,11 @@
+[
+    {
+        "titulo": "Cien años de soledad",
+        "autor": "García Márquez, Gabriel",
+        "sinopsis": "Cien años de soledad es una novela del escritor colombiano Gabriel García Márquez, ganador del Premio Nobel de Literatura en 1982. Es una obra maestra del realismo mágico y narra la historia de la familia Buendía en el pueblo ficticio de Macondo",
+        "genero": "Realismo mágico",
+        "año_publicacion": "1967",
+        "precio": "20.50",
+        "portada": "https://m.media-amazon.com/images/I/91TvVQS7loL._AC_UF894,1000_QL80_.jpg"
+    }
+]

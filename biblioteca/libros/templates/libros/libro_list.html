@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Listado de libros{% endblock %}
+
+{% block content %}
+<h1>Listado de libros</h1>
+
+{% if anterior %}
+<a class="btn btn-success" href="{{ anterior }}" role="button">Volver</a>
+{%  endif %}
+
+<a href="{% url 'crear-libro' %}" class="btn btn-outline-success">Crear</a>
+
+<div class="row row-cols-1 row-cols-md-5 g-4">
+    {% for libro in libro_list %}
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{ libro.portada }}" class="card-img-top" alt="{{ libro.titulo }}" />
+            <div class="card-body">
+                <h5 class="card-title">{{ libro.titulo }}</h5>
+                <a type="button" class="btn btn-outline-success" href="{% url 'detalle-libro' libro.id %}">Ver ficha</a>
+                {% comment %} <a type="button" class="btn btn-outline-success mt-2" onclick="agregarAlCarrito({{ libro.id }})">Agregar al carrito</a> {% endcomment %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+{% comment %} <script>
+    function agregarAlCarrito(libroId) {
+        console.log("Libro agregado al carrito con ID:", libroId);
+    }
+</script> {% endcomment %}
+    
+{% endblock %}
